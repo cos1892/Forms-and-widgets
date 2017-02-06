@@ -1,0 +1,885 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: "GothamRoundedBook";
+
+}
+
+html {
+	background: #efefef;
+	font-size: 10px;
+}
+
+body {
+	width: 1600px;
+	margin: 0 auto;
+	padding: 50px;
+}
+
+@font-face {
+	font-family: 'GothamRoundedBook';
+	src: url('fonts/GothamRoundedBook.woff') format('woff');
+}
+
+@font-face { 
+	font-family: GothamRoundedBold;
+	src: url('fonts/GothamRoundedBold.woff') format('woff');
+}
+
+@font-face { 
+	font-family: GothamRoundedMedium;
+	src: url('fonts/GothamRoundedMedium.woff') format('woff'); 
+}
+
+
+a {
+	text-decoration: none;
+}
+
+button:hover {
+	cursor: pointer;
+}
+
+button, a {
+	-webkit-transition: background .4s;
+	-o-transition: background .4s;
+	transition: background .4s;
+}
+
+.clearfix::after {
+	content: "";
+	display: block;
+	visibility: hidden;
+	clear: both;
+}
+
+.converter {
+	width: 308px;
+	margin-bottom: 40px;
+	padding-top: 5px;
+}
+
+.converter .item {
+	height: 110px;
+	color: #b2b2b2;
+	background: #fff;
+	position: relative;
+}
+
+.converter .item:not(:last-child) {
+	border-bottom: 2px solid #e2e2e2;
+}
+
+.converter label {
+	display: block;
+	width: 102px;
+	height: 54px;
+	font-size: 1.8rem;
+	text-transform: uppercase;
+	border-right: 1px solid #d7d7d7;
+	float: left;
+	text-align: center;
+	margin-top: 26px;
+	line-height: 54px;
+}
+
+.converter .item .currency-usd {
+	font-size: 3rem;
+	position: absolute;
+	top: 42px;
+	right: 136px;
+}
+
+.converter .item .currency-gbp {
+	font-size: 3rem;
+	position: absolute;
+	top: 42px;
+	right: 126px;
+	color: #dcdbdb;
+}
+
+.converter input {
+	width: 180px;
+	height: 110px;
+	padding-right: 20px;
+	font-size: 4rem;
+	text-align: right;
+	line-height: 110px;
+	border: none;
+	color: #b2b2b2;
+}
+
+#gbp-input {
+	color: #dcdbdb;
+}
+
+.converter .navigation {
+	height: 64px;
+	background: #526e82;
+}
+
+.converter .navigation button {
+	height: 64px;
+	border: none;
+	background: #526e82;
+	width: 70px;
+	float: right;
+}
+
+.converter .navigation .course {
+	width: 102px;
+	background: #ff8989;
+	float: left;
+}
+
+.converter .navigation button:hover {
+	background: #526EB3;
+}
+
+.converter .navigation .course:hover {
+	background: red;
+}
+
+.converter .navigation button .ico {
+	display: block;
+	background: url(img/currency-sprite.png) no-repeat;
+	height: 30px;
+	margin: 0 auto;
+}
+
+.converter .navigation .course .ico {
+	background-position: 0 0;
+	width: 46px;
+}
+
+.converter .navigation .add-currency .ico {
+	background-position: -53px 0;
+	width: 30px;
+}
+
+.converter .navigation .change-view .ico {
+	background-position: -90px 0;
+	width: 32px;
+}
+
+.calendar {
+	width: 308px;
+	font-size: 1.8rem;
+}
+
+.calendar .header {
+	height: 85px;
+	background: #526e82;
+	color: white;
+	position: relative;
+}
+
+.calendar .left-arrow, .right-arrow {
+	display: block;
+	background: url(img/calendar-sprite.png) no-repeat;
+	width: 25px;
+	height: 25px;
+	position: absolute;
+	top: 30px;
+}
+
+.calendar .left-arrow:hover, .right-arrow:hover {
+	cursor: pointer;
+}
+
+.left-arrow {
+	background-position: 0 0;
+	left: 15px;
+}
+
+.right-arrow {
+	background-position: -15px 0;
+	right: 15px;
+}
+
+.month-and-year span {
+	display: block;
+	text-align: center;
+}
+
+.month-and-year {
+	padding-top: 14px;
+}
+
+.month-and-year .month {
+	text-transform: uppercase;
+	font-family: "GothamRoundedMedium";
+	margin-top: 6px;
+}
+
+.calendar table {
+	border-collapse: collapse;
+}
+
+.calendar table a {
+	color: #9d9d9d;
+}
+
+.calendar td, .calendar th {
+	width: 44px;
+	text-align: center;
+}
+
+.calendar thead {
+	background: #4cd9c0;
+}
+
+.calendar  th {
+	height: 55px;
+	color: #3dad99;
+	font-family: "GothamRoundedBold";
+}
+
+.calendar tbody {
+	background: #fff;
+}
+
+.calendar td {
+	height: 47px;
+}
+
+.calendar td a {
+	display: block;
+	width: 30px;
+	height: 30px;
+	margin: 0 auto;
+	line-height: 30px;
+}
+
+.calendar td a:hover, .calendar td a.active {
+	background: #ff8989;
+	border-radius: 50%;
+	color: #fff;
+	font-family: "GothamRoundedMedium";
+}
+
+.weather {
+	width: 308px;
+	margin-top: 40px;
+	position: relative;
+}
+
+.weather .slider {
+	height: 248px;
+	position: relative;
+	overflow: hidden;
+}
+
+.weather img{
+	width: 308px;
+	height: 248px;
+	opacity: .8;
+}
+
+.weather ul {
+	width: 2000px;
+}
+
+.weather ul li {
+	list-style: none;
+	float: left;
+	width: 308px;
+	height: 248px;
+}
+
+.weather .nav-slider {
+	position: absolute;
+	right: 6px;
+	bottom: 10px;
+}
+
+.weather .nav-slider button {
+	display: inline-block;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: #05aeb3;
+	cursor: pointer;
+	margin-right: 4px;
+	border: none;
+}
+
+.weather .nav-slider button.active {
+	background: #076164;
+}
+
+.weather .nav-slider button:hover {
+	background: #076164;
+}
+
+.weather .description {
+	position: absolute;
+	left: 12px;
+	bottom: 73px;
+}
+
+.weather .description span {
+	display: block;
+	font-size: 1.7rem;
+	font-family: "GothamRoundedMedium";
+	color: #fff;
+}
+
+.weather .description .degrees {
+	position: relative;
+}
+
+.weather .description .degrees .value{
+	font-size: 5rem;
+	font-family: "GothamRoundedBook";
+	line-height: 50px;
+}
+
+.weather .description .degrees .ico-degree {
+	position: absolute;
+	top: -8px;
+	right: 62px;
+	font-size: 2rem;
+}
+
+.weather .navigation {
+	height: 64px;
+	background: #fff;
+}
+
+.weather .navigation button {
+	border: none;
+	font-family: "GothamRoundedBook";
+	font-size: 4rem;
+	line-height: 40px;
+	text-align: center;
+	background: #fff;
+	width: 80px;
+	height: 64px;
+	float: left;
+}
+
+.weather .navigation button:hover {
+	background: #ff8989;
+}
+
+.weather .navigation .add-new, .weather .navigation .menu {
+	width: 70px;
+	float: right;
+}
+
+.weather .navigation button .ico {
+	display: block;
+	background: url(img/weather-sprite.png) no-repeat;
+	height: 30px;
+	margin: 0 auto;
+}
+
+.weather .navigation .add-new .ico {
+	background-position: 0 0;
+	width: 29px;
+}
+
+.weather .navigation .menu .ico {
+	background-position: -33px 0;
+	width: 50px;
+}
+
+.weather .farenheit, .celcius {
+	color: #dedede;
+}
+
+.weather button.active {
+	background: #ff8989;
+	color: #fff;
+}
+
+.music-player {
+	margin-top: 40px;
+	box-sizing: border-box;
+	width: 728px;
+	height: 200px;
+	background: #fff;
+	padding: 8px 15px 15px 8px;
+}
+
+.music-player .preview {
+	width: 126px;
+	float: left;
+	margin-right: 30px;
+}
+
+.music-player .player {
+	float: left;
+	width: 549px;
+}
+
+.music-player .artist-image {
+	width: 126px;
+	height: 126px;
+	margin-bottom: 10px;
+}
+
+.music-player h3 {
+	font-family: "GothamRoundedBook";
+	font-size: 2.35rem;
+	margin-top: 10px;
+}
+
+.music-player .button-follow {
+	width: 126px;
+	height: 40px;
+	line-height: 40px;
+	background: #526e82;
+	border: none;
+}
+
+.music-player .button-follow .text {
+	color: #fff;
+	text-transform: uppercase;
+	font-family: "GothamRoundedBold";
+	font-size: 1.4rem;
+}
+
+.music-player .button-follow .ico {
+	display: inline-block;
+	background-position: 0 0;
+	width: 15px;
+	height: 18px;
+}
+
+.music-player .button-follow:hover {
+	background: #526EB3;
+}
+
+.music-player .artist-name {
+	color: #a8a8a8;
+}
+
+.music-player .song-name {
+	color: #d6d6d6;
+}
+
+.music-player .song-download {
+	margin-top: 18px;
+}
+
+.music-player .song-download .progress-download {
+	box-sizing: border-box;
+	width: 490px;
+	height: 10px;
+	border-radius: 5px;
+	background: #bbfdf1;
+	border-left: 300px solid #4cd9c0;
+	border-right: 100px solid #efefef;
+	float: left;
+}
+
+.music-player .song-download .time {
+	float: right;
+	font-size: 1.6rem;
+	color: #c6c6c6;
+	margin-top: -5px;
+}
+
+.music-player .navigation {
+	width: 565px;
+	margin-top: 26px;
+}
+
+.music-player .navigation button {
+	float: left;
+	border: none;
+	width: 46px;
+	height: 46px;
+	border-radius: 50%;
+	background: #fff;
+}
+
+.music-player button .ico {
+	display: block;
+	background: url(img/player-sprite.png) no-repeat;
+	height: 22px;
+	margin: 0 auto;
+}
+
+.music-player .navigation button:hover {
+	background: #4cd9c0;
+}
+
+.music-player .navigation .play {
+	background: #4cd9c0;
+	margin-right: 34px;
+}
+
+.music-player .navigation button.play:hover {
+	background: #41c0a9;
+}
+
+.music-player .navigation .play .ico {
+	background-position: -30px 0;
+	width: 15px;
+}
+
+.music-player .navigation .previous .ico {
+	background-position: -51px 0;
+	width: 30px;
+}
+
+.music-player .navigation .next {
+	margin-right: 22px;
+}
+
+.music-player .navigation .next .ico {
+	background-position: -81px 0;
+	width: 30px;
+}
+
+.music-player .navigation .shuffle, .repeat, .heart, .add {
+	margin-right: 32px;
+}
+
+.music-player .navigation .shuffle .ico {
+	background-position: -110px 0;
+	width: 30px;
+}
+
+.music-player .navigation .repeat .ico {
+	background-position: -145px 0;
+	width: 30px;
+}
+
+.music-player .navigation .heart .ico {
+	background-position: -173px 0;
+	width: 31px;
+}
+
+.music-player .navigation .add .ico {
+	background-position: -206px 0;
+	width: 27px;
+}
+
+.music-player .navigation .share .ico {
+	background-position: -238px 0;
+	width: 30px;
+}
+
+
+.mail {
+	margin-top: 40px;
+	width: 308px;
+}
+
+.mail .header {
+	height: 64px;
+	background: #4cd9c0;
+}
+
+.mail .header .menu {
+	float: left;
+	width: 74px;
+	height: 64px;
+	border: none;
+	background: #41c0a9;
+}
+
+.mail .header .menu:hover {
+	background: #1b7b69;
+}
+
+.mail .header .ico {
+    background: url(img/chat-sprite.png) no-repeat;
+    width: 29px;
+    margin: 0 auto;
+    height: 21px;
+    display: block;
+}
+
+.mail .header .menu .ico {
+    background-position: 1px 1px;
+}
+
+.mail .header .add-new .ico {
+	background-position: -132px 0;
+    width: 20px;
+}
+
+.mail .header .add-new {
+	float: right;
+	width: 74px;
+	height: 64px;
+	border: none;
+	background: #4cd9c0;
+}
+
+.mail .header .add-new:hover {
+	background: #41c0a9;
+}
+
+.mail .mail-item {
+	background: #fff;
+	padding: 13px 15px;
+	position: relative;
+}
+
+.mail .mail-item:not(:nth-child(2)) {
+	border-top: 1px solid #e2e2e2;
+	padding: 18px 15px;
+}
+
+.mail .mail-item .avatar {
+	float: left;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	margin-right: 17px;
+}
+
+.mail .mail-item .name {
+	font-family: "GothamRoundedMedium";
+	font-size: 1.9rem;
+	color: #bac2c7;
+}
+
+.mail .mail-item .message {
+	font-size: 1.4rem;
+	color: #c8d2d9;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.mail .typing {
+	font-style: italic;
+}
+
+.mail .mail-item .message > span {
+	display: inline-block;
+	background: url(img/chat-sprite.png) no-repeat;
+	width: 10px;
+	height: 10px;
+}
+
+.mail .mail-item .message .sent {
+	background-position: -92px -3px;
+}
+
+.mail .mail-item .message .not-delivered {
+	background-position: -116px -3px;
+}
+
+
+.mail .mail-item .status {
+	position: absolute;
+	width: 20px;
+	right: 0;
+	top: 0;
+	height: 100%;
+}
+
+.mail .mail-item .status > span {
+	position: absolute;
+	top: 50%;
+	margin-top: -4px;
+	display: inline-block;
+	background-image: url(img/chat-sprite.png);
+	width: 8px;
+	background-position-y: -5px;
+	height: 8px;
+}
+
+.mail .mail-item .status > span.online {
+	background-position-x: 86px;
+}
+
+.mail .mail-item .status > span.offline {
+	background-position-x: 103px;
+}
+
+.mail .mail-item .status > span.not-desturb {
+	background-position-x: 118px;
+}
+
+.form-login {
+	margin-top: 40px;
+	width: 308px;
+	font-size: 1.8rem;
+}
+
+.email, .password {
+	position: relative;
+}
+
+.form-login .ico {
+	display: block;
+	background: url(img/login-sprite.png) no-repeat;
+	height: 25px;
+	position: absolute;
+}
+
+.form-login .email .ico {
+	background-position: 0 0;
+	width: 30px;
+	top: 25px;
+	left: 27px;
+}
+
+.form-login .password .ico {
+	background-position: 0 -30px;
+	width: 30px;
+	top: 25px;
+	left: 27px;
+}
+
+
+#email {
+	width: 238px;
+	height: 72px;
+	padding-left: 65px;
+	border-style: solid;
+	border-color: #ff8989;
+	border-width: 0 0 0 5px;
+}
+
+#password {
+	width: 238px;
+	height: 72px;
+	padding-left: 70px;
+	border-style: solid;
+	border-color: #e2e2e2;
+	border-width: 1px 0 0;
+}
+
+.form-login input::-webkit-input-placeholder {
+	font-family: "GothamRoundedBook";
+	font-size: 2rem;
+}
+
+.form-login input::-moz-placeholder {
+	font-family: "GothamRoundedBook";
+	font-size: 2rem;
+}
+
+.sign-up, .submit {
+	width: 154px;
+	height: 62px;
+	text-transform: uppercase;
+	font-family: "GothamRoundedBold";
+}
+
+.sign-up:hover, .submit:hover {
+	background: #526EB3;
+	color: #fff;
+}
+
+.sign-up {
+	display: block;
+	background: #7191a8;
+	color: #627d90;
+	text-align: center;
+	line-height: 62px;
+	float: left;
+}
+
+.submit {
+	background: #526e82;
+	border: none;
+	font-size: 1.8rem;
+	color: #fff;
+}
+
+.form-example {
+	margin-top: 40px;
+	width: 308px;
+	font-size: 2rem;
+	background: #fff;
+	padding: 13px;
+	box-sizing: border-box;
+}
+
+#valid-input, #invalid-input {
+	float: left;
+	box-sizing: border-box;
+	width: 215px;
+	height: 50px;
+	border-radius: 15px;
+	padding: 15px;
+	margin: 0 0 33px 0;
+	font-size: 2rem;
+}
+
+#valid-input {
+	border: 2px solid #4cd9c0;
+	color: #4cd9c0;
+	margin-right: 15px;
+}
+
+#invalid-input {
+	border: 2px solid #ff8989;
+	color: #ff8989;
+	margin-right: 20px;
+}
+
+#checkbox-true {
+	display: none;
+}
+
+.form-example input[type="checkbox"] + label span{
+    display:block;
+    width: 52px;
+    height: 52px;
+    background:url(img/chek-and-radio-sprite.png) -7px -7px no-repeat;
+    float: left;
+}
+
+.form-example input[type="checkbox"]:checked + label span {
+    background:url(img/chek-and-radio-sprite.png) -72px -7px no-repeat;
+}
+
+.progress-bar {
+	box-sizing: border-box;
+	width: 215px;
+	height: 10px;
+	border-radius: 5px;
+	background: #99b5c9;
+	border-left: 145px solid #526e82;
+	position: relative;
+	margin-bottom: 30px;
+	margin-right: 20px;
+	float: left;
+}
+
+.dot {
+	width: 18px;
+	height: 18px;
+	border-radius: 50%;
+	background: #526e82;
+	position: absolute;
+	top: -4px;
+	left: -5px;
+}
+
+.dot:hover {
+	cursor: pointer;
+	background: #526EB3;
+}
+
+.form-example input[type="radio"] {
+	display: none;
+}
+
+.form-example input[type="radio"] + label span {
+	display: block;
+	float: left;
+	width: 44px;
+	height: 42px;
+	background:url(img/chek-and-radio-sprite.png) -189px -7px no-repeat;
+}
+
+#radio-unselected + label span {
+	margin-top: -15px;
+}
+
+.form-example input[type="radio"]:checked + label span {
+	background:url(img/chek-and-radio-sprite.png) -134px -5px no-repeat;
+}

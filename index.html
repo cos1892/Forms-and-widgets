@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Forms and widgets</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="converter">
+		<div class="item clearfix">
+			<label for="usd-input">usd</label>
+			<span class="currency-usd">$</span><input type="text" name="usd-input" id="usd-input" value="356.3" />
+		</div>
+		<div class="item clearfix">
+			<label for="gbp-input">gbp</label>
+			<span class="currency-gbp">£</span><input type="text" name="gbp-input" id="gbp-input" value="156.3" />
+		</div>
+		<div class="navigation clearfix">
+			<button class="course"><span class="ico"></span></button>
+			<button class="change-view"><span class="ico"></span></button>
+			<button class="add-currency"><span class="ico"></span></button>
+		</div>
+	</div>
+	<div class="calendar">
+		<div class="header clearfix">
+			<a class="left-arrow"></a>
+			<div class="month-and-year">
+				<span class="year">2012</span>
+				<span class="month">July</span>
+			</div>
+			<a class="right-arrow"></a>
+		</div>
+		<table>
+			<thead>
+				<tr>
+					<th>S</th>
+					<th>M</th>
+					<th>T</th>
+					<th>W</th>
+					<th>T</th>
+					<th>F</th>
+					<th>S</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><a href="#">1</a></td>
+					<td><a href="#">2</a></td>
+					<td><a href="#">3</a></td>
+					<td><a href="#">4</a></td>
+					<td><a href="#">5</a></td>
+					<td><a href="#" class="active">6</a></td>
+					<td><a href="#">7</a></td>
+				</tr>
+				<tr>
+					<td><a href="#">8</a></td>
+					<td><a href="#">9</a></td>
+					<td><a href="#">10</a></td>
+					<td><a href="#">11</a></td>
+					<td><a href="#">12</a></td>
+					<td><a href="#">13</a></td>
+					<td><a href="#">14</a></td>
+				</tr>
+				<tr>
+					<td><a href="#">15</a></td>
+					<td><a href="#">16</a></td>
+					<td><a href="#">17</a></td>
+					<td><a href="#">18</a></td>
+					<td><a href="#">19</a></td>
+					<td><a href="#">20</a></td>
+					<td><a href="#">21</a></td>
+				</tr>
+				<tr>
+					<td><a href="#">22</a></td>
+					<td><a href="#">23</a></td>
+					<td><a href="#">24</a></td>
+					<td><a href="#">25</a></td>
+					<td><a href="#">26</a></td>
+					<td><a href="#">27</a></td>
+					<td><a href="#">28</a></td>
+				</tr>
+				<tr>
+					<td><a href="#">29</a></td>
+					<td><a href="#">30</a></td>
+					<td><a href="#">31</a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div class="weather">
+		<div class="slider">
+			<ul class="clearfix">
+				<li><img src="img/Greece.jpg" alt="Greece image"></li>
+				<li><img src="img/Greece.jpg" alt="Greece image"></li>
+				<li><img src="img/Greece.jpg" alt="Greece image"></li>
+			</ul>
+			<div class="nav-slider">
+				<button data-slide-index="0" class="active"></button>
+				<button data-slide-index="1"></button>
+				<button data-slide-index="2"></button>
+			</div>
+		</div>
+		<div class="description">
+			<span class="degrees">
+				<span class="value">73</span>
+				<span class="ico-degree">&deg;</span>
+			</span>
+			<span class="city-country">Zagora, Greece</span>
+			<span class="time">8:34 am</span>
+		</div>
+		<div class="navigation clearfix">
+			<button class="farenheit active">F</button>
+			<button class="celcius">C</button>
+			<button class="menu"><span class="ico"></span></button>
+			<button class="add-new"><span class="ico"></span></button>
+		</div>
+	</div>
+	<div class="music-player clearfix">
+		<div class="preview">
+			<img class="artist-image" src="img/FadedPaperFigures.jpg" alt="Artist image">
+			<button class="button-follow">
+				<span class="ico"></span>
+				<span class="text">follow</span>
+			</button>
+		</div>
+		<div class="player">
+			<h3 class="artist-name">Faded Paper Figures</h3>
+			<h3 class="song-name">Invent it all again</h3>
+			<div class="song-download clearfix">
+				<div class="progress-download"></div>
+				<div class="time">-1:57</div>
+			</div>
+			<div class="navigation clearfix">
+				<button class="play"><span class="ico"></span></button>
+				<button class="previous"><span class="ico"></span></button>
+				<button class="next"><span class="ico"></span></button>
+				<button class="shuffle"><span class="ico"></span></button>
+				<button class="repeat"><span class="ico"></span></button>
+				<button class="heart"><span class="ico"></span></button>
+				<button class="add"><span class="ico"></span></button>
+				<button class="share"><span class="ico"></span></button>
+			</div>
+		</div>
+	</div>
+	<div class="mail">
+		<div class="header clearfix">
+			<button class="menu"><span class="ico"></span></button>
+			<button class="add-new"><span class="ico"></span></button>
+		</div>
+		<div class="mail-item clearfix">
+			<img class="avatar" src="img/myImage.jpg" alt="avatar">
+			<div class="name-and-message">
+				<p class="name">Yaroslav Lozhkin</p>
+				<p class="message">Alright got it!</p>
+			</div>
+			<div class="status">
+				<span class="online"></span>	
+			</div>
+		</div>
+		<div class="mail-item clearfix">
+			<img class="avatar" src="img/myImage.jpg" alt="avatar">
+			<div class="name-and-message">
+				<p class="name">Michael Zenaty</p>
+				<p class="message sent"><span class="sent"></span>Sent</p>
+			</div>
+			<div class="status">
+				<span class="offline"></span>	
+			</div>
+		</div>
+		<div class="mail-item clearfix">
+			<img class="avatar" src="img/myImage.jpg" alt="avatar">
+			<div class="name-and-message">
+				<p class="name">Wells Riley</p>
+				<p class="message typing">Typing...</p>
+			</div>
+			<div class="status">
+				<span></span>	
+			</div>
+		</div>
+		<div class="mail-item clearfix">
+			<img class="avatar" src="img/myImage.jpg" alt="avatar">
+			<div class="name-and-message">
+				<p class="name">Matt Vickers</p>
+				<p class="message"><span class="not-delivered"></span>Not delivered!</p>
+			</div>
+			<div class="status">
+				<span></span>	
+			</div>
+		</div>
+		<div class="mail-item clearfix">
+			<img class="avatar" src="img/myImage.jpg" alt="avatar">
+			<div class="name-and-message">
+				<p class="name">Divya Manian</p>
+				<p class="message">You can download it on github.</p>
+			</div>
+			<div class="status">
+				<span class="not-desturb"></span>	
+			</div>
+		</div>
+		<div class="mail-item clearfix">
+			<img class="avatar" src="img/myImage.jpg" alt="avatar">
+			<div class="name-and-message">
+				<p class="name">Vin Thomas</p>
+				<p class="message">Tnahk you!</p>
+			</div>
+			<div class="status">
+				<span></span>	
+			</div>
+		</div>
+	</div>
+	<form action="#" class="form-login">
+		<div class="email">
+			<span class="ico"></span>
+			<input type="email" id="email" placeholder="Email Address..." />
+		</div>
+		<div class="password">
+			<span class="ico"></span>
+			<input type="password" id="password" placeholder="Password..." />
+		</div>
+		<a class="sign-up" href="#">Sign up</a>
+		<button type="submit" class="submit">Sign in</button>
+	</form>
+	<div class="form-example clearfix">
+		<input type="text" id="valid-input" value="Valid input" />
+		<input type="checkbox" id="checkbox-true" checked="checked"/>
+		<label for="checkbox-true"><span></span></label>
+		<div class="progress-bar">
+			<div class="dot"></div>
+		</div>
+		<input type="radio" id="radio-unselected"/>
+		<label for="radio-unselected"><span></span></label>
+		<input type="text" id="invalid-input" value="Invalid input" />
+		<input type="radio" id="radio-selected" checked="checked" />
+		<label for="radio-selected"><span></span></label>
+	</div>
+</body>
+</html>
